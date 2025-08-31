@@ -1,0 +1,297 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[木鱼琐语]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>site-lib/media/favicon.png</url><title>木鱼琐语</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sun, 24 Aug 2025 15:26:10 GMT</lastBuildDate><atom:link href="site-lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sun, 24 Aug 2025 15:26:09 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[木鱼是为了惊醒，假如一个人常自惊醒，木鱼就没有用处了。我常常想，浩如瀚海的佛教经典，其实在讲心灵的种种尘垢和种种磨洗的方法，它只有一个目的，就是恢复人的本心里明澈朗照的功能，磨洗成一面镜子，使对人生宇宙的真理能了了分明。
+——林清玄《木鱼之眼》<a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/index.html</link><guid isPermaLink="false">MySay/index.md</guid><pubDate>Sun, 24 Aug 2025 15:23:36 GMT</pubDate></item><item><title><![CDATA[StaticBlog]]></title><description><![CDATA[索引：<a data-href="index" href="mysay/index.html" class="internal-link" target="_self" rel="noopener nofollow">index</a>
+作者：木鱼精灵
+时间：2025年08月24日 （星期日） 23:14:32 性能优先：选择 Hugo，适合大型站点与多语言内容。
+快速建博：Hexo 或 Jekyl 更适合初学者和快速上线。
+文档优先：MkDocs(快速简洁)或 VuePress(功能更强)。
+Vue 生态：使用 VuePress，可整合前端组件。
+GitHub Pages 部署：Jekyll 为最佳选择，官方原生支持。然而，官方是不支持Windows平台的。考虑到自己更新的频率不高，日常还是使用的Obsidian本地记录，发布的不多，还是考虑使用Obsidian的Export as HTML插件，定期导出一份就可以了。
+哪怕是重新全站输出，量也不大。
+今天测试了一个中文标题发布的兼容性，看来，标题不能使用中文，否则web访问就是：感谢腾讯云EdgeOne，绑定了mysay.muyu.org域名发布。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/staticblog.html</link><guid isPermaLink="false">MySay/StaticBlog.md</guid><pubDate>Sun, 24 Aug 2025 15:20:26 GMT</pubDate></item><item><title><![CDATA[OSSbase]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月26日 （星期四） 22:02:04 各大公有云厂商对对象存储的定义：亚马逊（AWS S3），腾讯云（COS），阿里云（OSS），华为云（OBS），百度云（BOS），网易（NOS），快快云（OSS）。对象存储是由AWS首先推出的一个存储产品形态，AWS的S3协议也成为对象存储事实标准，各个云存储厂商的云存储服务协议都兼容S3。OSS是阿里云对象存储服务（Object Storage Service）的一个简称，它是阿里云提供的海量、安全、低成本、高可靠的云存储服务。OSS在可靠性、安全性、成本和数据处理能力方面都有着突出的优势。使用OSS，您可以通过网络随时存储和调用包括文本、图片和视频等在内的各种非结构化数据文件。1.存储空间（Bucket）
+存储空间是您用于存储对象（Object）的容器，所有的对象都必须隶属于某个存储空间。2.对象/文件（Object）
+对象是 OSS 存储数据的基本单元，也被称为OSS的文件。对象由元信息（Object Meta）、用户数据（Data）和文件名（Key）组成。对象由存储空间内部唯一的Key来标识。3.地域（Region）
+地域表示 OSS 的数据中心所在物理位置。您可以根据费用、请求来源等综合选择数据存储的地域。详情请查看OSS已经开通的Region。4.访问域名（Endpoint）
+Endpoint 表示OSS对外服务的访问域名。OSS以HTTP RESTful API的形式对外提供服务，当访问不同地域的时候，需要不同的域名。通过内网和外网访问同一个地域所需要的域名也是不同的。具体的内容请参见各个Region对应的Endpoint。5.访问密钥（AccessKey）
+AccessKey，简称 AK，指的是访问身份验证中用到的AccessKeyId 和AccessKeySecret。OSS通过使用AccessKeyId 和AccessKeySecret对称加密的方法来验证某个请求的发送者身份。AccessKeyId用于标识用户，AccessKeySecret是用户用于加密签名字符串和OSS用来验证签名字符串的密钥，其中AccessKeySecret 必须保密。优点：OSS适合存储静态资源，如图像、电影、备份文件和日志。如果内置的CDN集成，可以缓存资产以加快页面加载速度，使用数据对象存储元数据片段的能力简化了应用程序体系结构。
+缺点：对象存储不允许按片段更改数据。只能修改整个对象，不适用于数据经常变化的应用。
+特点：SAN(块存储) 和 NAS(文件存储)都是面向数据中心内访问的设备，而OSS（对象存储）是面向互联网、移动互联网(3G、4G、5G)而产生的，为大量使用的网页、视频、图片、音频、文档访问而设计。OSS是一个分布式的对象存储服务，将数据文件以对象/文件（Object）的形式上传到存储空间（Bucket）中，提供的是一个Key-Value对形式的对象存储服务。用户可以根据Object的名称（Key）唯一地获取该Object的内容。虽然用户可以使用类似test1/test.jpg的名字，但是这并不表示用户的Object是保存在test1目录下面的。对于OSS来说，test1/test.jpg仅仅只是一个字符串，和a.jpg这种并没有本质的区别。因此不同名称的Object之间的访问消耗的资源是类似的。对于OSS来说，可以通过一些操作来模拟类似的功能，但是代价非常昂贵。比如重命名目录，希望将test1目录重命名成test2，那么OSS的实际操作是将所有以test1/开头的Object都重新复制成以test2/开头的Object，这是一个非常消耗资源的操作。因此在使用OSS的时候要尽量避免类似的操作。OSS保存的Object不支持修改（追加写Object需要调用特定的接口，生成的Object也和正常上传的Object类型上有差别）。用户哪怕是仅仅需要修改一个字节也需要重新上传整个Object。而文件系统的文件支持修改，比如修改指定偏移位置的内容、截断文件尾部等，这些特点也使得文件系统拥有广泛的适用性。但另外一方面，OSS能支持海量的用户并发访问，而文件系统会受限于单个设备的性能。因此，将OSS映射为文件系统是非常低效的，也是不建议的做法。如果一定要挂载成文件系统的话，建议尽量只做新建文件、删除文件、读取文件这几种操作。使用OSS应该充分发挥其优点，即海量数据处理能力，优先用来存储海量的非结构化数据，比如图片、视频、文档等。直接来源地址：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/145544929" target="_self">https://zhuanlan.zhihu.com/p/145544929</a>
+配置OSS防盗链：不配置OSS防盗链的话，网站可能会被盗链，流量费用却算在自己头上，很冤很亏。
+<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/ossbase.html</link><guid isPermaLink="false">MySay/OSSbase.md</guid><pubDate>Sun, 24 Aug 2025 15:14:15 GMT</pubDate></item><item><title><![CDATA[ObsidianWeb]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月13日 （星期五） 01:40:10 安装Webpage HTML Export，Obsidian具备静态化能力。
+新建专门的文件夹，用于存放自己对外发布的Blog，建议通过模板功能制作Blog的模板，该文件夹的md文档使用。
+根据需要输出静态站点，同步到服务器。 插件名称：Webpage HTML Export
+插件作者：Nathan George
+插件说明：将文档、文件夹或库导出成 HTML 文件，有黑白主题以及大纲目录。
+项目地址：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://github.com/KosmosisDire/obsidian-webpage-export" target="_self">https://github.com/KosmosisDire/obsidian-webpage-export</a>
+————————————————<br>
+直接来源地址： <a data-tooltip-position="top" aria-label="https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/readme/webpage-html-export_readme/" rel="noopener nofollow" class="external-link is-unresolved" href="https://pkmer.cn/Pkmer-Docs/10-obsidian/obsidian%E7%A4%BE%E5%8C%BA%E6%8F%92%E4%BB%B6/readme/webpage-html-export_readme/" target="_self">PKMer</a> 在阿里云购买对象存储OSS，新建Bucket，设置静态页面托管、CNAME绑定。
+考虑安装阿里云自己的终端软件OSS-Browser。
+配置RAM 访问控制，获取终端登录信息。
+同步Obsidian的静态文件夹到服务器。
+网上说，阿里云的OSS香港节点有5G免费存储和免费流量，正好有阿里云账号，开通一个试试。<br>
+帮助手册：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://help.aliyun.com/zh/oss/" target="_self">https://help.aliyun.com/zh/oss/</a><br>详解之一：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://forum-zh.obsidian.md/t/topic/10274/1" target="_self">https://forum-zh.obsidian.md/t/topic/10274/1</a>
+仅标准存储（本地冗余）容量支持使用5 GB/月的免费额度（即每月标准存储（本地冗余）容量≤5 GB时，不收取标准存储（本地冗余）容量费用）。支持使用免费额度的地域为：中国香港等。 仅外网流出流量（NetworkOut）支持使用5 GB/月的免费额度（即每月外网流出流量≤5 GB时，不收取外网流出流量费用），支持使用免费额度的地域为：中国香港等。
+<br>
+评论区有人推荐：国内就用OSS是最优选，如果使用国外的服务，研究AWS不如研究&nbsp;<a data-tooltip-position="top" aria-label="https://www.cloudflare.com/zh-cn/products/r2/" rel="noopener nofollow" class="external-link is-unresolved" href="https://www.cloudflare.com/zh-cn/products/r2/" target="_self">Cloudflare R2&nbsp;54</a>。存储空间免费10G，下载流量全免费，就是网络有时候也不太行。<br>
+《<a data-tooltip-position="top" aria-label="https://wzfou.com/guonei-yuncunchu/" rel="noopener nofollow" class="external-link is-unresolved" href="https://wzfou.com/guonei-yuncunchu/" target="_self">十个国内优秀对象云存储服务使用对比</a>》
+<br>阿里云的香港节点，每月有免费的<a data-tooltip-position="top" aria-label="https://help.aliyun.com/document_detail/173534.html?spm=a2c4g.11186623.0.0.6eb326e5G1MMbs#:~:text=%E6%A0%87%E5%87%86%E5%AD%98%E5%82%A8%EF%BC%88%E6%9C%AC%E5%9C%B0%E5%86%97%E4%BD%99%EF%BC%89%E5%AE%B9%E9%87%8F%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A85%20GB/%E6%9C%88%E7%9A%84%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6" rel="noopener nofollow" class="external-link is-unresolved" href="https://help.aliyun.com/document_detail/173534.html?spm=a2c4g.11186623.0.0.6eb326e5G1MMbs#:~:text=%E6%A0%87%E5%87%86%E5%AD%98%E5%82%A8%EF%BC%88%E6%9C%AC%E5%9C%B0%E5%86%97%E4%BD%99%EF%BC%89%E5%AE%B9%E9%87%8F%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A85%20GB/%E6%9C%88%E7%9A%84%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6" target="_self">5GB存储空间</a>和<a data-tooltip-position="top" aria-label="https://help.aliyun.com/document_detail/173535.html#:~:text=%E5%A4%96%E7%BD%91%E6%B5%81%E5%87%BA%E6%B5%81%E9%87%8F%EF%BC%88NetworkOut%EF%BC%89%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A85%20GB/%E6%9C%88%E7%9A%84%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6" rel="noopener nofollow" class="external-link is-unresolved" href="https://help.aliyun.com/document_detail/173535.html#:~:text=%E5%A4%96%E7%BD%91%E6%B5%81%E5%87%BA%E6%B5%81%E9%87%8F%EF%BC%88NetworkOut%EF%BC%89%E6%94%AF%E6%8C%81%E4%BD%BF%E7%94%A85%20GB/%E6%9C%88%E7%9A%84%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6" target="_self">5GB下载流量</a>。
+也就是说，如果你的Obsidian库不超过5G，同时你每个月的同步下载流量也不超过5G，那么使用香港节点的阿里云是完全免费的。
+如果你的库大小超过了5G，那么可以购买一个香港的存储空间资源包，也是9元/40G/年。这样的话，每年只需9元，你就得到了一个存储空间40G，下载流量60G的阿里云OSS服务，这对一般的笔记来说已经是绰绰有余了。
+①中国内地各地域绑定的域名必须在工信部备案，其他地域的域名绑定不需要在工信部备案。
+②一个域名只能绑定在一个存储空间上，一个存储空间最多可以绑定100个域名。
+③一个账号可绑定的域名个数无限制。
+阿里云OSS还是很香的，我的付费虚拟主机对绑定域名的数量都有苛刻的限制，而OSS可以绑定的域名几乎算是不限制。所以，如果将@的A记录或者CNAME记录解析到阿里云，其实就可以通过文件夹形式实现多主题的静态页面。问题及解决：
+导出高级选项：
+Include file tree
+adds an interactive file tree to the sidebar.
+可以自定义是否在左边栏显示目录树。
+这个目录树如果是单独的，更新最新文档时同步刷新目录树，那么可以极大的减少文档生成数量。
+但目录树如果是直接生成在文档页，那么旧文档也的目录树是没有之后文档的链接的，价值减少很多。如果要体现左边栏价值，那么Webpage HTML Export输出需要全目录输出。
+我的做法是在该目录下生成一个index文档，并且用dataview动态列出本目录的目录树，输出静态页时，就是本目录的索引页。更新时，就可以只更新index和当前文档。
+当然，文档模板必须有一个链接是本目录的索引页。参阅件：<br>
+<a rel="noopener nofollow" class="external-link is-unresolved" href="https://blog.zhangyingwei.com/posts/2022m4d11h19m42s28/" target="_self">https://blog.zhangyingwei.com/posts/2022m4d11h19m42s28/</a><br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/obsidianweb.html</link><guid isPermaLink="false">MySay/ObsidianWeb.md</guid><pubDate>Sun, 24 Aug 2025 15:14:10 GMT</pubDate></item><item><title><![CDATA[ObsidianSync]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月18日 （星期三） 22:43:00 希望在手机和电脑之间实现文件的实时同步，包括文件的变更操作。但发现目前百度网盘、坚果云都无法实现。百度网盘同步只支持PC端，在手机端无法同步，只能在需要看的时候手动点击下载，没有自动化；坚果云在手机端即使设置了离线收藏，下载的文件也在内部空间，其他应用无法访问。正如Obsidian同步，也有网友研究Obsidian发布的免费替代品。
+<a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/634583092?utm_psn=1699499464077840384" target="_self">https://zhuanlan.zhihu.com/p/634583092?utm_psn=1699499464077840384</a>插件：<br>
+<a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/583641404?utm_psn=1699507752991404034" target="_self">https://zhuanlan.zhihu.com/p/583641404?utm_psn=1699507752991404034</a>通过github自动实现多平台同步和版本控制
+（1）gitee（国内github）新建远程仓库
+（2）本地仓库创建及同步远程仓库
+（3）obsidian安装obsidian git插件
+（4）设置第三方插件obsidian git（主要设置auto pull interval，多个平台都设置，实现多平台自动同步）Remotely save 插件，使用webdav同步到云。
+或者“本地仓库”直接使用云盘目录：1.打开 Obsidian。2.在初始界面选择“打开本地仓库”，然后导航到你在 OneDrive 或坚果云上新建的文件夹。
+官方：Obsidian官方Sync同步功能，付费。
+<br>第三方软件进行同步（文件系统层级）。同步的本质是不同终端的文件夹映射。由于Obsidian移动端暂不支持直接连接外部云盘，需要通过第三方如FolderSync<a data-href="Foldersync" href="mysay/foldersync.html" class="internal-link" target="_self" rel="noopener nofollow">Foldersync</a>或者DropSync、Rsync软件将移动端的文件夹（手机本地存储文件夹）与云端强行同步，这类软件本身并不提供云空间储存，因此需要有支持WebDav的网盘，例如坚果云。
+插件方案一：Remotely方案：Obsidian Remotely第三方插件，配合DropBox/OneDrive / WebDAV/S3/OSS/COS 等网盘及云存储服务来使用。
+插件方案二：GitHub​方案：配合 obsidian-git 插件做同步。将本地 vault 推到 github 仓库。问题：网络问题。
+自用：基于对“同步”算法的不信任，考虑使用异步方式进行数据的同步和备份。
+一是生产数据。平板本地的Obsidian产生数据，数据单向流动。即：平板-云盘（云盘移动版的手机文件夹自动备份功能）。
+二是加工数据。平板的数据比较原生态，从云盘新增方式下载到笔记本的本地，通过本地Obsidian精加工。即：笔记本-云盘（PC端的同步盘功能）。该版本是权威数据。特别注意：Obsidian使用的时候，不要打开云盘，两者争抢资源会导致Obsidian保存失败、云盘同步失败。
+三是共享数据。异地的PC上的Obsidian均下载云盘的数据，保持最新数据同步，仅供查阅。参阅件：<br><a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/664006937" target="_self">https://zhuanlan.zhihu.com/p/664006937</a>
+工具选择
+Obsidian有很多同步方法：
+官方同步（sync核心插件），96美元/年
+Remotely Save 插件，定期同步
+LiveSync 插件，即时同步
+Git 插件
+第三方工具如 resilio sync、iCloud、Onedrive、foldersync
+Remotely Save 存储库选择
+Remotely Save 支持：
+S3 或兼容S3的服务
+Dropbox
+Webdav
+Onedrive个人版
+最终选择是 R2（S3兼容）和 Webdav（infinicloud），我会按 Dropbox和Onedrive→R2→Webdav的顺序描述，并提及一些服务商。2.1 Dropbox 或 Onedrive
+选择后鉴权就行了，适合能稳定访问服务的使用环境。
+Onedrive个人版免费层 5GB，Office365拼车（40-50/年）后1TB，但国内一些地区不能访问，一些地区能访问但间歇抽搐，一些地区平常一直顺畅但特殊日期，各有各的缘法。2.2 Cloudflare R2
+稳定、快速，免费层提供 10GB存储容量，计费见官方价格。项目	免费层	付费层
+存储	10GB/月	$0.015 / GB-month
+A类操作	100万次/月	$4.50 / million requests
+B类操作	1000万次/月	$0.36 / million requests
+免费层适合轻度使用，A类操作（写）和 B类操作（读）一般不会超额。超额费用也不高，100GB额外存储费用约 110元/年（90Gx0.015x12=$16.2）。2.3 WebDav
+WebDav 是非常简单、使用广泛的网盘协议，服务商也非常多。这里推荐 infinicloud，免费层提供 20GB存储，没有其他限制。
+注册后在 My Page 页面打开 Apps Connection，生成 Password，就有了 服务器地址、用户名、密码。
+注意，例如 Remotely Save 里的基文件夹名为 “iliy”，你要先在 infinicloud 的 File Browser 页面根目录下建立 “iliy”文件夹。
+infinicloud 是一家日本服务商，在中国访问速度大概 400KB/s~2MB/s，对于笔记这样的大量小文件很够用了。
+已排除服务商
+3.1 坚果云 Webdav
+坚果云対用户 webdav api 的调用限制是 500次/30分钟，即使每30分钟同步1次，也会轻易超额报错。
+3.2 Backblaze
+免费层存储 10GB，但B类操作只给了 3000次/天，我轻易超了。
+可以试探的其他选择
+我是 A库用 R2，B库用 infinicloud，全端同步。你也可以试试以下选择：
+4.1 koofr
+好象是北欧的，支持 webdav，免费层提供10GB存储，还支持链接并管理 Onedrive、Google Drive、Dropbox。4.2 Yandex Disk
+俄罗斯的谷歌，支持 webdav，免费层提供10GB存储。4.3 Alist
+自建服务，支持挂载很多网盘，并提供 webdav，很方便。
+需要一台服务器，便宜的 VPS 可以低到 $2/年，有一定学习成本。也可以在软路由、NAS上搭建，搭配 Cloudflare 的 Zero Trust 把家里设备的服务穿透出来。4.5 阿里云 OSS
+支持 S3 的服务，最低 9元/年=40GB存储空间，但流量、API 各类操作的收费复杂，可以试试。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/obsidiansync.html</link><guid isPermaLink="false">MySay/ObsidianSync.md</guid><pubDate>Sun, 24 Aug 2025 15:14:06 GMT</pubDate></item><item><title><![CDATA[ObsdianPlugins]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月13日 （星期五） 02:08:31 Obsidian插件位置：你的知识库.obsidian\plugins一个插件基本就是下面几个文件组成：
+main.js 是 Obsidian 插件的主要代码文件，包含了插件的逻辑和功能实现，可以使用 Obsidian 的 API和其他 JavaScript 库和框架，来访问和操作Obsidian的各种功能和数据，响应用户的操作，实现插件的各种功能。汉化主要处理这个文件中的字段
+manifest.json 是Obsidian 插件的元数据文件，包含了插件的名称、版本号、作者、描述、依赖等信息，必须存在于插件的根目录下，用于描述插件的基本信息和依赖关系。
+styles.css 是 Obsidian 插件的样式文件，包含了插件的样式定义，可以使用CSS 语法来定义插件的样式，美化插件的界面。
+data.json 是 Obsidian 插件的数据文件 ，包含了插件需要存储的数据，可以使用JSON 格式来存储数据，方便插件在不同的运行周期中读取和写入数据，实现数据的持久化。部分汉化插件：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://blog.pt.cx/article/1693995399" target="_self">https://blog.pt.cx/article/1693995399</a>一、calendar
+日历视图
+月视图：Calendar 插件主要提供了一个月视图日历，允许用户在 Obsidian 的侧边栏中直观地查看整个月的日期。
+与已有笔记的链接
+当某一日期已经有相关的笔记时，这个日期在日历上会以不同的颜色或样式显示，提醒用户已有内容。
+日期文件命名
+用户可以根据自己的喜好配置日期格式，以确定与特定日期关联的笔记的命名规则。例如：“2023-08-28”或“August 28, 2023”。
+快捷键支持
+为了提高用户的操作效率，Calendar 插件提供了一系列快捷键。例如，用户可以快速切换到上一个或下一个月，或直接跳转到今天的日期。
+与其他插件的集成
+Calendar 插件支持与 Obsidian 的其他插件集成。例如，与任务管理插件集成后，可以在日历上直观地显示任务的截止日期或事件。
+使用场景
+日记和日常记录：对于那些喜欢写日记或记录每天的事件的用户，Calendar 插件提供了一个直观的方式来管理和回顾这些笔记。
+计划和目标管理：用户可以利用日历视图来计划未来的任务和事件，从而更好地管理时间和目标。
+会议和事件记录：企业和团队用户可以使用日历插件来记录每天的会议和事件，确保不遗漏任何重要信息。
+总结
+Obsidian 的 Calendar 插件是一个强大的工具，特别适合需要与日期关联的笔记管理。它的直观界面和强大的集成功能使得日常的知识管理和计划变得更为高效。
+二、webpage-html-export三、Dataview
+必装插件，像操作数据库一样来维护自己的笔记系统，通过metadata建立索引，自定义查询归纳文档，页面内嵌变量，执行自定义js脚本。
+Dataview 提供了一种基于 JavaScript 的查询语言，可从其笔记中提取、筛选和展示数据。根据查询的结果，Dataview 可以动态生成表格、列表或其他格式的视图，这些视图可以直接嵌入到任何 Obsidian 笔记中。
+YAML 元数据支持：用户可以在笔记的 YAML 头部定义自定义字段，然后使用 Dataview 查询这些字段。这为笔记的结构化数据提供了巨大的灵活性。
+使用方法:
+数据:Dataview 通过从 Markdown 的前言和内联字段中提取信息来生成数据。
+Markdown 前言是一个位于 markdown 文档顶部的，由 --- 围住的任意 YAML，用于存储有关该文档的元数据。
+内联字段是 Dataview 的一个特性，允许您在 markdown 文档中直接以 Key:: Value 语法编写元数据。
+一旦你给文档等添加了元数据，你就可以使用 Dataview 的四种查询模式之一进行查询。
+Dataview Query Language (DQL)：一种基于流水线的、略显 SQL 风格的表达式语言，可支持基本用例。
+Inline Expressions：你可以直接嵌入 markdown 的 DQL 表达式，并在预览模式下评估。
+DataviewJS：一个功能强大的 JavaScript API，提供完全访问 Dataview 索引和一些方便的渲染工具。
+Inline JS Expressions：允许你执行任意 JS 的 JavaScript 等价物。四、Obsidian Git
+自动备份：每当你的笔记发生更改时，Obsidian Git 可以自动将这些更改提交到你的 Git 仓库，确保你的内容始终有备份。
+手动备份：如果你不喜欢自动备份，可以随时点击一下按钮，手动将更改推送到 Git 仓库。
+历史版本：有时我们可能误删内容或想要查看笔记的早期版本。通过Obsidian Git，你可以轻松回溯并查看你笔记的历史版本。
+多设备同步：使用 Git 仓库，你可以在多个设备之间同步你的笔记。例如，你可以在办公室的电脑上编写笔记，然后在家里的电脑上继续编辑。
+冲突解决：如果你在多个设备上编辑同一个笔记，Obsidian Git 会帮助你识别和解决这些更改之间的冲突。
+五、cMenu<br>
+<a rel="noopener nofollow" class="external-link is-unresolved" href="https://github.com/chetachiezikeuzor/cMenu-Plugin/" target="_self">https://github.com/chetachiezikeuzor/cMenu-Plugin/</a><br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/obsdianplugins.html</link><guid isPermaLink="false">MySay/ObsdianPlugins.md</guid><pubDate>Sun, 24 Aug 2025 15:14:02 GMT</pubDate></item><item><title><![CDATA[NewHost]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年11月21日 （星期二） 22:20:35 各种各样的原因，停更了有一年了。以前总觉得云服务器ECS高攀不起（事实上也高攀不起），受知乎蛊惑，还是申请了一个99元/年的云服务器（该价格三年有效）。话说，云服务器的确要麻烦一些，如果不是二十年前就学了一些Linux的皮毛，还真的有些搞不定。其实，说简单也简单，就是在互联网上有了一个虚拟机，这个虚拟机可以由得自己折腾，今天装Linux，明天装Windows，都可以。官方说法是：
+一台云服务器ECS实例等同于一台虚拟机，包含vCPU、内存、操作系统、网络、磁盘等最基础的计算组件。
+最开始是纯Linux环境下手动安装apache、mysql、php，以及还算比较熟悉的wordpress，还算顺利，跑起来了。只是，由于备案问题，只能IP访问。备案还是挺麻烦的，总体而言，是可以通过“备案接入”的方式，在不改变原备案的情况下，新增服务器接入。后来觉得，用纯的Linux实在费劲，年纪大了，就弄个wordpress而已，不想复习Linux指令了，于是更换磁盘镜像，选择了宝塔面板。问题集锦：
+Q：通过IP无法访问。
+A：需要在“添加安全组规则”中开放80端口。Q: MySQL 8安装好后异常
+A: 重装MySQL 5.7……好慢……Q: 安装好wp后，更新插件，提示：“无法连接到文件系统，请确认您的凭据。要执行请求的操作，WordPress需要访问您网页服务器的权限。 请输入您的FTP登录凭据以继续。 如果您忘记了您的登录凭据（如用户名、密码），请联系您的网站托管商。”
+A: 不要用客户端上传文件（默认为root），要用FTP。当然，上传了也没关系，可以变更文件所有者：
+chown -R www /home/www/网站文件夹<a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/newhost.html</link><guid isPermaLink="false">MySay/NewHost.md</guid><pubDate>Sun, 24 Aug 2025 15:13:58 GMT</pubDate></item><item><title><![CDATA[memo-flomo]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月23日 （星期一） 00:27:31 尼克拉斯 · 卢曼，卡片盒记事法 写作不是思考的结果，而是思考发生的媒介。
+写作可以很好地提高思维能力，因为它迫使你从更深的层次去阅读。就像学游泳一样，你必须通过实践来学习，而不仅仅是通过在纸面上的学习。
+没有人会从零开始一件事情。
+关于创造力最坑爹神话之一就是它从无到有发生的。空白的页面、白色的画布、空荡荡的舞台 —— 我们最浪漫、最普遍的艺术主题似乎在暗示，“从零开始”是创造力的本质。但正确的方法是，在你选择你要写的东西之前，你必须下功夫研究并积累。
+收藏往往没有作用。
+多数时候我们都会陷入「收藏者谬误」，感觉收藏就是学习到，但实际上「知晓某事」并不是「知道某事」。收藏更像是把信息搬运（而非加工），途中没有增加任何知识。
+为什么分类不重要。
+我们的大脑不会按照分类来工作，至少一开始不会。当知识增长时，我们所知道的事物网络就会有机地生长（而非搭建了某种结构，更像是植物。而非建筑物）。
+信息被个人主观的理解，贴上标签建立连接，成为知识。每个人的体系都不一样，所以一定是个性化的，不断生长的。传统的分类无法满足这种生长的状态。
+“我们敬佩 Notion 背后的初心，但我们不打算拷贝 Notion 的功能做成 All in one；我们也赞叹 RoamResearch 信息架构之精妙，但我们也不打算借鉴 Roam 的双向链接；我们感慨石墨背后编辑器的耗费的精力，但我们不打算成为另一个文档编辑器；当资本和创业者都在关注企业协同的时候，我们选择关注个体。”
+——2020年flomo 浮墨创始人少楠发表在少数派上的思考‍‍‍《卡片笔记写作法》中提到了几类卡片：
+Fleeting Notes：流水笔记：这种笔记只是信息的提醒，随便写但是很快就会被扔到垃圾桶或者被归为永久笔记
+Literature Notes：文献笔记：阅读时候的副产品，只记录自己关注的，简单而用心，并用自己的语言记录。
+Permanent Notes：永久性笔记：永远不会被扔掉。本身就包含了必要的信息，以一种永久且可理解的方式存在，自己和自己讨论。是对于上面两种笔记的再加工。
+闪念笔记，单机版微博？其实多端的闪念记录，使用Obsidian不是最合适的，毕竟同步不是它的强项。
+本来，网易的有道云笔记是比较合适的，用起来也比较顺手，只是商业化了之后，只允许两个终端同步，很显然不是多端同步，多端闪念的最合适的软件了。
+不同终端不同厂家都有自己的笔记软件/手机便签，而且基本都有自动同步，但是一般也没开放给其他的厂家，比如华为的笔记和小米的笔记就不兼容——虽然各自都很好。另外，不支持富文本也算一个问题吧。
+那么notion是不是一个很好的方案呢？很显然也不是。或许它本身还是很好的，但是经典的网络问题让它不是那么合适了。“ALL IN ONE”&amp;插件体制，选择交叉以后的发展：
+有人选择了“ALL IN ONE”+插件体制——Notion
+有人选择了“ALL IN ONE”+无插件体制——印象笔记
+有人选择了“节制”+插件体制——Flomo
+有人选择了“节制”+无插件体制——Bear
+Bear（熊掌记）缺点：
+不支持文件夹，只能靠给文章打标签来分类，这样就引入了非通用的垃圾内容。
+不能预览文本大纲，文章一长结构就不清晰了，只好分成多篇来写，于是两难：长篇的笔记易写难读，分篇的话篇数会很庞大
+总之，Bear 是好的，但这个“好”仅限一定强度之内的使用，比如拿来替代苹果自带的备忘录确实足够强大了。
+只支持苹果。Flomo作为灵感记录工具原因：
+多平台支持：Flomo支持Windows/Linux/Android等，可以通过微信、APP、网页和插件等多种方式使用，这意味着可以在不同设备上随时记录想法。
+可实时同步：我们在Flomo任意平台记录的想法，都可以实时同步到所有设备上，确保我们的记录不会丢失。这样，我们可以随时随地回顾和整理自己的想法，无需担心同步的问题。
+简洁高效：Flomo提供了一个简洁而直观的界面，让我们能够专注于记录想法而不被复杂的功能干扰。它的设计注重用户体验，让我们能够快速、高效地记录灵感。在后续将闪念笔记整理和转化到Obsidian时，也不会被其他杂乱的信息干扰。
+标签管理：每一条在Flome上记录的想法，都支持打上标签，这样我们可以更好地组织和分类自己的记录。通过标签，我们可以轻松地找到相关的想法，提高整理和回顾的效率。
+1024那天申请了flomo，注册后明确了相关策略：
+免费用户： 500M 存储空间，并且会压缩图片；
+PRO 会员：10G 存储空间，可以设置原图上传；
+注意：
+文字存储不包含在存储空间内，可以认为是无限量存储；
+原图上传需要自己手动开启（开启后需要重启 App）
+flomo 支持全局导出和设置条件导出，导出格式为 HTML，用任意浏览器即可打开，所有用户每 7 天可以导出一次。
+（问题是，不能随时和及时的导出数据~导出的数据也不是md格式）但碎碎念放在别人家的服务器上，总是一种裸体的感觉。特别是1024当天发生了<a data-tooltip-position="top" aria-label="https://www.163.com/dy/article/IHTAPH2O0511D3QS.html" rel="noopener nofollow" class="external-link is-unresolved" href="https://www.163.com/dy/article/IHTAPH2O0511D3QS.html" target="_self">语雀P0级事故宕机的事情</a>（为表歉意，语雀赠送了六个月的会员福利，不得不说，还是有高人）。坊间认为：本地数据才是王道，云端可以用作备份、分享的渠道之一，但不是存储重要数据的阵地。多备份、多冗余，数据才是最重要的。
+使用Obsidian、logseq、思源笔记这些以本地数据为第一性的笔记软件，永远比云端笔记可靠。配合icloud、onedrive、坚果云、syncthing、foldersync等同步工具，ipad、mac、windows、android、nas多端备份。Obsidian又不是做不到不是么？通过Obsidian的核心插件-时间戳笔记-设置。配置好存储目录、模板、格式等，就可以随时通过“创建时间戳笔记”碎碎念了（高端点：闪念笔记）。信息流规划，也趋于完善：
+手机：随时，但难以大段录入，适合闪念、随身记录，生活闪念用时间戳笔记完成；工作日志用日记完成。云单向备份。
+平板：轻任务，会议记录，用日记+模板完成。随感，用模板完成。云单向备份。
+这些轻任务的信息流，从云端回归电脑的Obsidian大本营。
+电脑：重任务，信息汇聚。再云同步备份。本地定期备份。
+<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/memo-flomo.html</link><guid isPermaLink="false">MySay/memo-flomo.md</guid><pubDate>Sun, 24 Aug 2025 15:13:54 GMT</pubDate></item><item><title><![CDATA[MarkdownEdit]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月23日 （星期一） 01:04:41 MarkdownPad
+目前分为 MarkdownPad2 和 MarkdownPad Pro 版本，后者收费，我们使用前者足矣，用户可以通过键盘快捷键和工具栏按钮来使用或者移除 Markdown 各种语法格式，支持自定义配色方案、字体、大小和布局 、即时HTML预览、HTML和PDF导出，被很多人称赞为 Windows 平台最好用的 Markdown 编辑器，实用性强，仅支持 Windows 系统。Ulysses
+一款由国外开发商 The Soulmen 制作的 Markdown 编辑器。与其它同类应用相比，Ulysses 最大的不同在于，它能根据内置的文件管理器，以及与 iCloud 云服务器的实时同步方案，达到最快捷的文章整理效率，支持OS X , iPad，26人民币每月，14天免费试用。Typora
+Typora 支持 Windows、OS X 和 Linux，Typora 支持即时渲染技术，这也是与其他 Markdown 编辑器最显著的区别，支持数学编辑，可与 Word 直接格式转换，在 Pandoc 的支持下进行多种文档格式转换， 适合那些对码字手速和排版顺畅度有要求的人群。
+表格功能比原生的Obsidian强太多……
+很好的md编辑器，不过，收费了~
+Typora 0.11.18是收费之前的最新版，然而，即便找到了该版本，安装完毕后，仍然提示需要下载最新版本——不让用了。Visual Studio Code
+Visual Studio Code 是众所周知的神器，是微软推出一款轻量级的文本编辑工具，类似于 Sublime，它已经默认集成 Markdown 文档编辑插件，原生就支持高亮 Markdown 的语法。Atom
+Atom 是 Github 专门为程序员推出的一个跨平台文本编辑器，具有简洁和直观的图形用户界面，并有很多有趣的特点：支持CSS，HTML，JavaScript等网页编程语言，当然也支持 Markdown ，支持宏，自动完成分屏功能，集成了文件管理器。Notable
+Notable一款基于 AGPL 协议开源的 Markdown 编辑器​，其界面清新、代码​开源，受到不少程序员​喜爱。Mark Text
+Mark Text一款基于 MIT 协议开源的 Markdown 编辑器，支持 WYSIWYG（所见即所得​）的编辑方式，它专注于速度和可用性。Mark Text是具有各种markdown​扩展名​的markdown实时预览编辑器。Haroopad
+Haroopad 是一个优秀的 Markdown 编辑器​，它是开源、免费、跨平台​的，支持windows，linux和mac系统。Haroopad已经内置了各种markdown​扩展，支持100多种编程语言​代码​的直接显示，甚至代码显示的背景框都有很多主题可以选择。该工具重点推荐 Ubuntu/Linux 用户使用。Smark
+国人编写的开源软件，Windows / Linux 等主流系统跨平台支持，完美支持 LaTex 数学公式、脚注、尾注等，支持使用本地 MathJax 调用，不需要在线访问 MathJax CDN，用户可配置的 Markdown 语法高亮显示，美观整洁，多种格式文件导出支持，简洁友好的界面布局，完备的各类快捷键，能极大地提高工作效率。
+作者自述：说白了只是为了自己方便使用，并没什么新奇的东西。我使用&nbsp;pandoc&nbsp;来转化&nbsp;markdown，但是我不想在修改文件时总是在编辑器、文字终端和浏览器间换来换去，因此我写了一个简单的编辑器，它在后台调用&nbsp;pandoc&nbsp;将当前编辑的&nbsp;markdown&nbsp;内容转化为&nbsp;HTML，而后将&nbsp;HTML&nbsp;在&nbsp;smark&nbsp;中的浏览器中显示出来，就是这么回事。Smark 依赖于&nbsp;pandoc、Qt 4.8&nbsp;和&nbsp;MathJax，在此向上述软件包开发者们致敬。请注意继承于 pandoc 的发布协议，Smark 同样遵循&nbsp;GPL。<a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/markdownedit.html</link><guid isPermaLink="false">MySay/MarkdownEdit.md</guid><pubDate>Sun, 24 Aug 2025 15:13:51 GMT</pubDate></item><item><title><![CDATA[Markdown]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月14日 （星期六） 14:54:04 官方：&lt;<a data-tooltip-position="top" aria-label="https://markdown.com.cn/basic-syntax/" rel="noopener nofollow" class="external-link is-unresolved" href="https://markdown.com.cn/basic-syntax/" target="_self">Markdown 基本语法 | Markdown 官方教程</a>&gt;
+长横线：三颗- 或者 三颗*，推荐前者。
+表格 图片（带链接）
+标准语法
+"图片链接" 未创建，点击以创建。或者直接使用html编码，功能更加强大。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/markdown.html</link><guid isPermaLink="false">MySay/Markdown.md</guid><pubDate>Sun, 24 Aug 2025 15:13:45 GMT</pubDate></item><item><title><![CDATA[GooglePinyin]]></title><description><![CDATA[作者：木鱼精灵
+时间：2007年4月18日 谷歌拼音半月谈——谈拼音输入法的四个方向2007年4月4日～2007年4月19日，谷歌拼音诞生半个月了。也许日子选的非常不好吧，谷歌拼音命运多桀，刚出生没多久就被“词库门”困扰。我们访问它的网站，除了16（修正自然双拼方案等）、17（词库等）而升级的版本外，这么久都没有动静了。是谷歌拼音没有需要修改的地方了么？我看不是——谷歌拼音远不完美。作为拼音输入法的发展方向，也许有四个：1、依赖辅助码（或者更高级一点，采用自然码的形码）降低重码；事实上，最早的拼音输入法，都没有考虑辅助码的问题，但是由于严重的重码问题，使用其他一些花哨的技术，不能从根本上解决，所以正如自然码之父周志农先生所说，“火火的那些输入法再发展，就会考虑到辅助码的问题了”。事实上，这个在很多拼音输入法上已经体现了，但是却是不彻底的体现。要说辅助码方式，最高级的就是自然码的形码。当年自然码（音形码）和五笔字型（形码）争天下的时候，能够三分天下有其一，和自然码双拼加形的极低的重码率和极高的学习速度密不可分。现在的其他拼音类输入法，仅仅在汉字的横竖撇捺折上做些工作，完全没有做到像自然码一样使用偏旁的声母（自然码形码的一般规则）来减少重码。这个方式，被自然码称为字词方式，依然为老自然码用户所钟爱。这种发展方式，优点就是可以做到输入法的尺寸很小，速度可以很快（可以和五笔字型一争高下），缺点就是为了高效率、少重码，某些偏旁并非自己的声母发音，增加了记忆负担。2、依赖语料的语句输入（比如自然码，智能狂拼，黑马等）；我们知道，自然码和智能狂拼都挂接了黑马的语料库，这种依赖语料库达到完美语句输入也是一种解决方案，只是这种方式，将导致输入法非常巨大，非一般用户所能接受。作为专业用户（比如“想打”的人们），基于效率和不破坏思维，可以接受这些巨大的语料库达到完美的输入效果。3、依赖语法的语句输入（比如微软拼音2003）；具体技术细节不太清楚，但是从微软拼音2003的70M的尺寸也是有些难以接受（后面倒是发行了精简版，20M）4、依赖人工智能的语句输入。搜狗在其六点声明里提到“独立利用搜索引擎技术对发展人工智能做出的开创性贡献”，虽然我对搜狗拼音在人工智能方面的贡献持非常严重的保留态度，但是“人工智能”的确是输入法应该走的一条道路。遗憾的是，语言文字学和人工智能的学术研究虽然比较多，但是真正用到输入法的几乎没有。事实上，我宁愿相信，Google在低调的发展谷歌拼音的人工智能技术，这从Google资助人工智能研究机构（<a data-tooltip-position="top" aria-label="http://news.techtarget.com.cn/20/3167520.shtml%EF%BC%89%E5%8F%AF%E7%95%A5%E8%A7%81%E7%AB%AF%E5%80%AA%E3%80%82%E4%BB%A5%E5%88%9B%E6%96%B0%E5%92%8C%E6%8A%80%E6%9C%AF%E4%B8%BA%E6%94%AF%E6%92%91%E7%9A%84Google%EF%BC%8C%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%B0%86AI%E7%94%A8%E4%BA%8E%E8%BE%93%E5%85%A5%E6%B3%95%E5%91%A2%EF%BC%9F%E6%88%91%E6%AE%B7%E5%88%87%E7%9A%84%E6%9C%9F%E5%BE%85%E3%80%82%E8%AF%B4%E5%8F%A5%E8%AF%B4%E8%AF%9D%EF%BC%8C%E6%90%9C%E7%B4%A2%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95%EF%BC%8C%E5%9C%A8%E6%9F%90%E4%BA%9B%E6%96%B9%E9%9D%A2%EF%BC%8C%E7%9C%9F%E7%9A%84%E6%9C%89%E7%9B%B8%E9%80%9A%E4%B9%8B%E5%A4%84%E3%80%82" rel="noopener nofollow" class="external-link is-unresolved" href="http://news.techtarget.com.cn/20/3167520.shtml%EF%BC%89%E5%8F%AF%E7%95%A5%E8%A7%81%E7%AB%AF%E5%80%AA%E3%80%82%E4%BB%A5%E5%88%9B%E6%96%B0%E5%92%8C%E6%8A%80%E6%9C%AF%E4%B8%BA%E6%94%AF%E6%92%91%E7%9A%84Google%EF%BC%8C%E4%BC%9A%E4%B8%8D%E4%BC%9A%E5%B0%86AI%E7%94%A8%E4%BA%8E%E8%BE%93%E5%85%A5%E6%B3%95%E5%91%A2%EF%BC%9F%E6%88%91%E6%AE%B7%E5%88%87%E7%9A%84%E6%9C%9F%E5%BE%85%E3%80%82%E8%AF%B4%E5%8F%A5%E8%AF%B4%E8%AF%9D%EF%BC%8C%E6%90%9C%E7%B4%A2%E5%92%8C%E8%BE%93%E5%85%A5%E6%B3%95%EF%BC%8C%E5%9C%A8%E6%9F%90%E4%BA%9B%E6%96%B9%E9%9D%A2%EF%BC%8C%E7%9C%9F%E7%9A%84%E6%9C%89%E7%9B%B8%E9%80%9A%E4%B9%8B%E5%A4%84%E3%80%82" target="_self">http://news.techtarget.com.cn/20/3167520.shtml）可略见端倪。以创新和技术为支撑的Google，会不会将AI用于输入法呢？我殷切的期待。说句说话，搜索和输入法，在某些方面，真的有相通之处。</a>拉拉杂杂说了这么多，总结一下吧：1、谷歌拼音辜负了大家的期望，半个月都没有升级了。2、拼音输入法加辅助码（形码）降低重码率（或者说减少翻页）是必由之路，而自然码在这方面已经等其他拼音输入法十几年了。3、语料方式的语句输入法并非完美的解决方案，但是在现阶段技术条件下，也是最理想的解决方案了，适合高端用户使用。4、期望有一款输入法能真正AI起来。Keepwalking说，“拼命叫嚣着的输入法们，他们的欲望太复杂，输入法本身的完善，恐怕远远不是放在第一位的考虑。”我只希望，在这个喧嚣的商业社会里，少些炒作，而能用心、用技术来做输入法，给大家献上一款真正完美的中文输入法。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/googlepinyin.html</link><guid isPermaLink="false">MySay/GooglePinyin.md</guid><pubDate>Sun, 24 Aug 2025 15:13:33 GMT</pubDate></item><item><title><![CDATA[GithubJpgDNS]]></title><description><![CDATA[作者：可乐不加糖​
+时间：2023年10月14日 （星期六） 23:29:41 <a data-tooltip-position="top" aria-label="https://www.zhihu.com/people/cs-sota" rel="noopener nofollow" class="external-link is-unresolved" href="https://www.zhihu.com/people/cs-sota" target="_self">可乐不加糖</a><br><a data-tooltip-position="top" aria-label="https://www.zhihu.com/question/48510028" rel="noopener nofollow" class="external-link is-unresolved" href="https://www.zhihu.com/question/48510028" target="_self">​</a>南京信息工程大学 工学硕士在GitHub中找一些项目或者资料的时候；总是会看到一些图片显示不出来，或者数学公式乱码，这个主要是因为DNS污染导致的。
+解决方法：修改hosts1、打开文件： C:\Windows\System32\drivers\etc\hosts2、在文件末尾添加：140.82.113.3 github.com
+140.82.114.20 gist.github.com151.101.184.133 assets-cdn.github.com
+151.101.184.133 raw.githubusercontent.com
+151.101.184.133 gist.githubusercontent.com
+151.101.184.133 cloud.githubusercontent.com
+151.101.184.133 camo.githubusercontent.com
+151.101.184.133 avatars0.githubusercontent.com
+199.232.68.133 avatars0.githubusercontent.com
+199.232.28.133 avatars1.githubusercontent.com
+151.101.184.133 avatars1.githubusercontent.com
+151.101.184.133 avatars2.githubusercontent.com
+199.232.28.133 avatars2.githubusercontent.com
+151.101.184.133 avatars3.githubusercontent.com
+199.232.68.133 avatars3.githubusercontent.com
+151.101.184.133 avatars4.githubusercontent.com
+199.232.68.133 avatars4.githubusercontent.com
+151.101.184.133 avatars5.githubusercontent.com
+199.232.68.133 avatars5.githubusercontent.com
+151.101.184.133 avatars6.githubusercontent.com
+199.232.68.133 avatars6.githubusercontent.com
+151.101.184.133 avatars7.githubusercontent.com
+199.232.68.133 avatars7.githubusercontent.com
+151.101.184.133 avatars8.githubusercontent.com
+199.232.68.133 avatars8.githubusercontent.com3、保存文件即可。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/githubjpgdns.html</link><guid isPermaLink="false">MySay/GithubJpgDNS.md</guid><pubDate>Sun, 24 Aug 2025 15:13:29 GMT</pubDate></item><item><title><![CDATA[edit]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月21日 （星期六） 00:48:57 全称Microsoft Visual Studio Code，懂了？写 MarkDown 文档只是牛刀小试，还可以用它写 Latex、Python、C/C++等等，几乎所有的语言。你只需要下载它，首先安装上简体中文包，并切换为简体中文，再安上 Markdown Preview Enhanced 插件就可以了。开源的！开源的！！开源的！！！全世界最大的开源平台GitHub出品的编辑器 Atom。Atom 和 VSCode 一样，并不只是用来写 MarkDown，但它依然是一款非常出色的 MarkDown 编辑器。
+优点
+是 GitHub 官方出品。大厂出品，品质和服务都是有保障的。
+支持实时预览，这一点非常重要了。
+可以安装多种插件，极大的扩展了软件的功能。各种快捷方式，神奇操作还不信手拈来。
+跨平台，这点的重要性不用我多说了吧。
+缺点
+有点耗资源，这从启动速度就可以看得出来，不过只是启动慢点而已，只要电脑不是太慢，码字还是非常棒的！
+跟 VSCode 一样，对新手不太友好。但只要肯钻研，都是有回报的。
+点击官网链接了解更多。终于写到 Vim了，我前面也说过，自从用了 Vim 后，其他编辑器我再也没正眼瞧过一眼，除了 Vim 化的 VSCode。移动端
+现代人在手机上花的时间越来越多了，所以手机排版的重要性就越来越突出了，虽然手机更加适合用来阅读，但有时候我们身边没有电脑时，想临时记一下灵感，这还是可以的。下面对我用过的一些软件进行说明，排名不分先后。MarkdownX
+MarkdownX 是一款 Android 下的 Markdown 编辑器，可以通过菜单栏按钮快速输入格式，左滑实时预览，支持插入图片，自动保存。MarkdownX 默认并不显示广告，你有需求可以开启广告，非常良心，这是一款免费应用。<a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/edit.html</link><guid isPermaLink="false">MySay/edit.md</guid><pubDate>Sun, 24 Aug 2025 15:13:21 GMT</pubDate></item><item><title><![CDATA[Deployment]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月29日 （星期日） 12:06:07 「自部署」工具
+云笔记：无论是Notion 也好， Flomo 也好，或者其它云笔记类工具，在给我们带来便利的同时，也让我们中的部分人对数据存放产生了一些顾虑。 将信息存放在App控制的云端时，除了笔记隐私问题以外，我们还要考虑笔记信息的可用性（服务中断，暂停），以及未来的迁移成本。
+本地笔记：以 Obsidian，Logseq 为代表的本地笔记工具，则很好地解决了App 信息的 「自主性」问题， 我们不仅可以将信息存放在本地文件夹，也能存放在第三方信任的云盘上进行同步，诸如：dropbox， Google Drive， 坚果云之类。但在移动端数据同步时也会遇到一些问题，而且，没有原生的 App 支持云存储的话，也会带来数据版本冲突等问题。
+第三种方向，自部署 App。
+Joplin： 类似 Evernote 的自部署版本
+Joplin 来自欧洲，开源免费（自部署的话）。既然说到 自部署的笔记工具， Joplin 显然不能绕过。
+Joplin 代表了一类自部署工具， 这些工具几乎都是 希望 通过自部署 实现 Evernote 的功能。界面也很像 早期的 Evernote，甚至有类似「剪藏」的插件。
+如果浅浅使用，Joplin 就是一个 本地存储的 Markdown 笔记工具。 不过实际上， Joplin 有很强的自部署特性，它允许用户（专业用户）开设自己的服务器存储空间，通过多种协议配置（诸如：WebDAV），将笔记数据存放同步到任何用户指定的位置。
+如果更加深度使用，我们也可以在服务器上直接部署 Joplin Server 版， 供其它多个客户端一起同步使用。Memos：类似 Flomo 的自部署版本
+是的，界面有点像 Flomo， 确切的说是 信息流 + 热力图 布局， 这也不是什么专利。 功能上，快速记录，标签，回顾 基础的功能都有。
+最重要的是：Memos 是一个开源项目并且支持自部署。 如果对数据存放有所顾虑的话，Memos 提供了很好的隐私优先方案。 缺点就是，我们必须自己找个服务器进行部署。 一旦可以部署，就能多端使用。
+另外一个优势是， 得益于开源， 有不少第三方开源的组件插件，或客户端开始支持 Memos。 我个人觉得，这是很好的趋势。Inke：类似 Notion 的自部署版本
+这是近期比较惊艳的开源项目之一。 从大家一窝蜂做 Notion-Like 笔记工具，到如今 可用的自部署开源项目出现，只有两三年时间。 这已经不是「卷」的问题了，而是时代发展更快了。
+Inke 提供了一个模块化编辑（Notion-like） 的笔记工具。 虽然不像Notion 那么成熟，比如 Inke 的表格 远远及不上 Notion 的 Database 功能，排版功能也是比较初级。
+我觉得普通笔记应用也已经足够了，而且 Inke 只是模块化菜单，并没有打算让自己成为 另一个 Notion， 我觉得甚至应该摆脱 Notion 这个标签，做出自己特色。来源：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/663815442" target="_self">https://zhuanlan.zhihu.com/p/663815442</a><br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/deployment.html</link><guid isPermaLink="false">MySay/Deployment.md</guid><pubDate>Sun, 24 Aug 2025 15:13:18 GMT</pubDate></item><item><title><![CDATA[CloudDisk]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月27日 （星期五） 01:17:19 坊间评价：
+百度云用于储存分享视频等大文件；
+OneDrive 用于储存和同步文档；
+Dropbox 的拓展性让我能方便使用各种 App。但是这三个云服务都不是那么完美：
+百度云对于非会员限制太多，且主观上担忧它的安全性；
+OneDrive 容量小、速度慢；
+Dropbox 完全需要代理才能使用。全平台：
+坚果云在 Windows、macOS、Android、iOS、Linux 以及 Windows Phone 平台下都有对应的版本，真正的全平台，不管你是什么系统，都可以用这款云盘随时随地的同步和访问指定的文件。界面：
+界面非常简洁，没有任何复杂的元素，该有的功能也是一个都不少。同步文件夹：
+坚果云是国内外唯一一个提供任意文件夹同步功能的企业网盘。
+市场上大多数带有同步功能的云盘都是只能同步单一的某个固定目录里的文件夹和文件，而坚果云不止于此，除了固定的坚果云目录，它做到了可以同步系统中的任何一个目录下的内容。
+坚果云提供了两种同步的方式：
+在客户端进行操作的，创建同步文件夹的功能，可以实现拖拽任一文件夹进行同步。
+直接在文件夹上打开右键菜单，选择坚果云的同步选项。
+本地盘存在感：
+在 Windows 中，坚果云作为和 C 盘、D 盘等本地磁盘并列的一个盘符存在，除了不能安装软件，完全当成一个硬盘使用都可以，而且还能云同步。第三方应用支持：
+WebDAV是一组基于超文本传输协议的技术集合，有利于用户间协同编辑和管理存储在万维网服务器文档。
+坚果云作为国内唯一一个支持 WebDAV 的云服务，与 office 365 完美集成，可以在 office 软件中编辑文档，直接同步到云盘中，同时还支持许多精品应用如 Notability 等并与之无缝连接，方便用户同步数据。
+坚果云自带的 WebDAV 服务非常好用，但目前官方对于 WebDAV 的两条限制，制约了一些使用场景。
+单个文件的大小不能超过 500MB；
+请求数不能超过 1200 次每 30 分钟
+相关链接：<a rel="noopener nofollow" class="external-link is-unresolved" href="https://zhuanlan.zhihu.com/p/456406269" target="_self">https://zhuanlan.zhihu.com/p/456406269</a><br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/clouddisk.html</link><guid isPermaLink="false">MySay/CloudDisk.md</guid><pubDate>Sun, 24 Aug 2025 15:13:14 GMT</pubDate></item><item><title><![CDATA[Grideatest]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月13日 （星期五） 02:07:32 昨天晚上，严格说是今天凌晨将Gridea同步问题解决了，可以正常发布到Gitee。之前拷贝静态文件的问题是：Gridea输出的静态文件默认是在网站的根目录下，如果放到子目录下面，html引用的css/img都会失效导致页面加载不完。作为发布系统，总体还是满意的，只是模板略少。作为编辑器，美中不足就是不支持实时渲染，看见md文档的实时效果。今日各种倒腾，兴起就把<a data-tooltip-position="top" aria-label="http://www.muyu.org" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org" target="_self">www.muyu.org</a> 解析到了阿里云，结果今天早上，备案商发来邮件，说备案信息失效，这才想起，备案站点是西域数码，如果解析到非西域站点，是要取消备案的……汗……搞定Obsidian的html输出后，Gridea的价值就不高了。最关键Gridea不能实现All in One。使用Obsidian可以用一个编辑器存储各类文档，包括本地的和需要发布的，而Gridea只能发布，而且还比较复杂——虽然界面更加美观，更符合站点设计（Obsidian更像一本书，而且左边栏问题暂时无解）。另外，Gridea同步到gitee后，还需要登录gitee更新？这就很不人性化了。<br><a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/grideatest.html</link><guid isPermaLink="false">MySay/Grideatest.md</guid><pubDate>Sun, 24 Aug 2025 15:12:13 GMT</pubDate></item><item><title><![CDATA[Foldersync]]></title><description><![CDATA[作者：木鱼精灵
+时间：2023年10月13日 （星期五） 02:07:05 FolderSync 是一款Android 端的文件同步工具,可以将手机中的文件自动同步到云端空间或者PC端，支持包括 FTP、WebDAV、Dropbox、Amazon S3，FTP，FTPS，SFTP，WebDAV等。可以使用WebDAV连接到坚果云账号，设置自动同步坚果云里的文件到手机里或者将手机本地的文件夹上传到坚果云。<a data-tooltip-position="top" aria-label="http://www.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="http://www.muyu.org/" target="_self">木鱼在线</a> - <a data-tooltip-position="top" aria-label="https://mysay.muyu.org/" rel="noopener nofollow" class="external-link is-unresolved" href="https://mysay.muyu.org/" target="_self">木鱼琐语</a> ]]></description><link>mysay/foldersync.html</link><guid isPermaLink="false">MySay/Foldersync.md</guid><pubDate>Sun, 24 Aug 2025 15:11:57 GMT</pubDate></item></channel></rss>
