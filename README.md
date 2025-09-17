@@ -3,6 +3,6 @@
 ## site:
 muyu's github
 ## domain:
-git.muyu.org
+[木鱼琐语Github版：git.muyu.org](https://git.muyu.org)
 ## gitdomain:
-muyu-org.github.io
+[木鱼琐语Github原生域名：muyu-org.github.io](https://muyu-org.github.io)
